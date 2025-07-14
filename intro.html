@@ -1,0 +1,22 @@
+Removing Git User Configuration
+
+To remove your Git user configuration, you can follow these steps:
+
+    Remove Global Configuration:
+    If you want to remove the user configuration globally (for all repositories on your system), you can run the following commands:
+
+    git config --global --unset user.name
+    git config --global --unset user.email
+
+This will remove the user.name and user.email entries from your global Git configuration file, typically located at ~/.gitconfig (on Linux/macOS) or %USERPROFILE%\.gitconfig (on Windows).
+
+Remove Local Configuration:
+If you want to remove the user configuration for a specific repository, you can run the following commands within the repository's directory:
+
+git config --local --unset user.name
+git config --local --unset user.email
+
+This will remove the user.name and user.email entries from the local Git configuration file, typically located at .git/config within the repository.
+
+Verify the Changes:
+After running the above commands, you can verify that the user configuration has been removed by running the git config --list command again. The user.name and user.email entries should no longer be present.
